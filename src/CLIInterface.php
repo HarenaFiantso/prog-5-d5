@@ -2,6 +2,8 @@
 
 namespace HarenaFiantso\Coffee;
 
+use Exception;
+
 class CLIInterface
 {
     public function run(): void
@@ -17,7 +19,7 @@ class CLIInterface
         try {
             $machine->makeCoffee($method, $choice);
             echo "Your coffee is ready, enjoy!\n";
-        } catch (\Exception $exception) {
+        } catch (Exception $exception) {
             echo "Ops! Error making coffee: " . $exception->getMessage() . "\n";
         }
 

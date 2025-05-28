@@ -2,7 +2,7 @@
 
 namespace HarenaFiantso\Coffee\Payment;
 
-class CardPayment
+class CardPayment implements PaymentInterface
 {
     /**
      * @throws PaymentException
