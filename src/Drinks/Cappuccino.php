@@ -2,8 +2,6 @@
 
 namespace HarenaFiantso\Coffee\Drinks;
 
-use HarenaFiantso\Coffee\Coffee;
-
 class Cappuccino extends Coffee
 {
     public function getName(): string

@@ -1,6 +1,6 @@
 <?php
 
-namespace HarenaFiantso\Coffee;
+namespace HarenaFiantso\Coffee\Drinks;
 
 abstract class Coffee
 {

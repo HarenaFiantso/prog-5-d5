@@ -2,9 +2,11 @@
 
 namespace HarenaFiantso\Coffee;
 
+use HarenaFiantso\Coffee\Drinks\{Espresso, Cappuccino, Americano, Latte};
+
 class CoffeeFactory
 {
-    public static function create(string $type): Coffee
+    public static function create(string $type): Americano|Cappuccino|Espresso|Latte
     {
         return match (strtolower($type)) {
             '1', 'espresso' => new Espresso(),
