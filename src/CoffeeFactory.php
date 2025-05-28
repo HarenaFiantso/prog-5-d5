@@ -7,14 +7,18 @@ use InvalidArgumentException;
 
 class CoffeeFactory
 {
-    public static function create(string $type): Americano|Cappuccino|Espresso|Latte
-    {
+    public static function create(
+        string $type,
+        int $sugar = 0,
+        bool $milk = false,
+        string $intensity = 'medium'
+    ): Americano|Cappuccino|Espresso|Latte {
         return match (strtolower($type)) {
-            '1', 'espresso' => new Espresso(),
-            '2', 'cappuccino' => new Cappuccino(),
-            '3', 'americano' => new Americano(),
-            '4', 'latte' => new Latte(),
-            default => throw new InvalidArgumentException("Drinks not found")
+            'espresso' => new Espresso($sugar, $milk, $intensity),
+            'latte' => new Latte($sugar, $milk, $intensity),
+            'americano' => new Americano($sugar, $milk, $intensity),
+            'cappuccino' => new Cappuccino($sugar, $milk, $intensity),
+            default => throw new InvalidArgumentException("Invalid drink : $type"),
         };
     }
 }
