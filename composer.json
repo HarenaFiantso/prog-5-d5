@@ -16,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Harenafiantso\\prog-5-d5\\": "src/"
+      "HarenaFiantso\\Coffee\\": "src/"
     }
   },
   "scripts": {
