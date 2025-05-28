@@ -1,0 +1,39 @@
+{
+  "name": "harenafiantso/prog-5-d5",
+  "description": "This project implements an automated coffee machine system with payment management, beverage selection, and dispensing. The solution is designed to be robust, extensible, and easy to maintain.",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Fiantso Harena",
+      "email": "hei.fiantso@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Harenafiantso\\prog-5-d5\\": "src/"
+    }
+  },
+  "scripts": {
+    "lint": "phpcs --standard=PSR12 src/",
+    "lint-fix": "phpcbf --standard=PSR12 src/",
+    "check": [
+      "@lint"
+    ],
+    "post-install-cmd": "@check",
+    "post-update-cmd": "@check"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
