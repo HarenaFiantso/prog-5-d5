@@ -1,6 +1,6 @@
 <?php
 
-namespace HarenaFiantso\Coffee\Application\CoffeeMachine;
+namespace HarenaFiantso\Coffee;
 
 class CoffeeMachine
 {

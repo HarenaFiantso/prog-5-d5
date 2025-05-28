@@ -11,7 +11,7 @@ class CoffeeFactory
             '2', 'cappuccino' => new Cappuccino(),
             '3', 'americano' => new Americano(),
             '4', 'latte' => new Latte(),
-            default => throw new \InvalidArgumentException("Boisson inconnue.")
+            default => throw new \InvalidArgumentException("Drinks not found")
         };
     }
 }

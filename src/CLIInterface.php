@@ -2,8 +2,6 @@
 
 namespace HarenaFiantso\Coffee;
 
-use HarenaFiantso\Coffee\Application\CoffeeMachine\CoffeeMachine;
-
 class CLIInterface
 {
     public function run(): void
